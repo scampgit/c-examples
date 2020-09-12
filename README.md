@@ -10,3 +10,7 @@ is to gather short C examples scattered throughout my computers and backups.)
 * `flock_example/`: a simple example illustrating the `flock(2)` system call
 * `so_attach_filter_udp/`: a simple example illustrating how to attach classic BPF filters to sockets
 * `seccomp_filter/`: a simple example illustrating how to use `libseccomp`
+
+examples have to be linked w/ libseccomp, f.e:
+cc -std=c17 -Wall -Wextra -c -o seccomp_lib.o seccomp_lib.c
+cc -o seccomp_lib seccomp_lib.o -lseccomp
